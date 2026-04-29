@@ -22,6 +22,11 @@
   time.timeZone      = "America/Argentina/Buenos_Aires";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
   # user 
   users.users.santiagolovisotto = {
     isNormalUser = true;
@@ -37,6 +42,7 @@
     unzip
     ripgrep
     fd
+    nano
   ];
 
   # shell 
