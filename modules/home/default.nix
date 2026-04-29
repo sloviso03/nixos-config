@@ -5,12 +5,12 @@
     ./editor      # neovim + lazyvim
     ./terminal    # alacritty
     ./desktop     # sway + waybar + gtk
-    (./monitors + "/${host}.nix")  # outputs específicos de esta máquina
+    (./monitors + "/${host}.nix")  # per-machine monitor outputs
   ];
 
   home = {
-    username = "santiagolovisotto";
+    username    = "santiagolovisotto";
     homeDirectory = "/home/santiagolovisotto";
-    stateVersion = "24.11";
+    stateVersion  = "24.11";
   };
 }

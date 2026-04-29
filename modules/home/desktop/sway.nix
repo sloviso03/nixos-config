@@ -1,17 +1,17 @@
 { ... }:
 {
   wayland.windowManager.sway = {
-    enable      = true;
+    enable = true;
     checkConfig = false;
 
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
-      menu     = "wofi --show drun";
+      menu = "wofi --show drun";
 
       fonts = {
         names = [ "JetBrainsMono Nerd Font" ];
-        size  = 11.0;
+        size = 11.0;
       };
 
       input = {
@@ -20,30 +20,36 @@
         };
       };
 
-      # Los outputs (monitores) NO van acá.
-      # Cada host define los suyos en modules/home/monitors/<hostname>.nix
+      # Monitor outputs are not defined here.
+      # Each host defines its own in modules/home/monitors/<hostname>.nix
       output = {};
 
+      # No gaps between windows or screen edges
+      gaps = {
+        inner = 0;
+        outer = 0;
+      };
+
       window = {
-        border   = 0;
+        border = 0;
         titlebar = false;
       };
 
       floating = {
-        border   = 0;
+        border = 0;
         titlebar = false;
       };
 
       colors = {
         focused = {
-          background = "#000000"; border     = "#000000";
+          background = "#000000"; border = "#000000";
           childBorder = "#000000"; indicator = "#000000";
-          text       = "#ffffff";
+          text = "#ffffff";
         };
         unfocused = {
-          background = "#000000"; border     = "#000000";
+          background = "#000000"; border = "#000000";
           childBorder = "#000000"; indicator = "#000000";
-          text       = "#888888";
+          text = "#888888";
         };
       };
 
@@ -54,6 +60,9 @@
         "${mod}+w" = "exec firefox";
         "${mod}+e" = "exec thunar";
         "${mod}+q" = "kill";
+        "${mod}+f" = "fullscreen toggle";
+        "${mod}+v" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
+
 
         # sway
         "${mod}+Shift+r" = "reload";
@@ -65,19 +74,25 @@
         # audio
         "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
         "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
-        "XF86AudioMute"        = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
         # focus
-        "${mod}+Left"  = "focus left";
-        "${mod}+Down"  = "focus down";
-        "${mod}+Up"    = "focus up";
+        "${mod}+Left" = "focus left";
+        "${mod}+Down" = "focus down";
+        "${mod}+Up" = "focus up";
         "${mod}+Right" = "focus right";
 
         # move
-        "${mod}+Shift+Left"  = "move left";
-        "${mod}+Shift+Down"  = "move down";
-        "${mod}+Shift+Up"    = "move up";
+        "${mod}+Shift+Left" = "move left";
+        "${mod}+Shift+Down" = "move down";
+        "${mod}+Shift+Up" = "move up";
         "${mod}+Shift+Right" = "move right";
+
+        # resize
+        "${mod}+Ctrl+Left" = "resize shrink width 50px";
+        "${mod}+Ctrl+Right" = "resize grow width 50px";
+        "${mod}+Ctrl+Up" = "resize shrink height 50px";
+        "${mod}+Ctrl+Down" = "resize grow height 50px";
 
         # workspaces
         "${mod}+1" = "workspace number 1";
@@ -90,10 +105,13 @@
         "${mod}+Shift+2" = "move container to workspace number 2";
         "${mod}+Shift+3" = "move container to workspace number 3";
         "${mod}+Shift+4" = "move container to workspace number 4";
+
+        "${mod}+button4" = "workspace prev";
+        "${mod}+button5" = "workspace next";
       };
 
       bars = [{
-        command  = "waybar";
+        command = "waybar";
         position = "bottom";
       }];
     };

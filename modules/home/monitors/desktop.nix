@@ -1,5 +1,13 @@
-# Para agregar/cambiar monitores en otra máquina, crear
-# modules/home/monitors/<hostname>.nix con la misma estructura.
+#
+#   +----------+  +-----------------------+
+#   |   DP-3   |  |       HDMI-A-1        |
+#   | 1366x768 |  |    1920x1080@100Hz    |
+#   |  @60Hz   |  |                       |
+#   +----------+  +-----------------------+
+#
+# To add monitors for another machine, create
+# modules/home/monitors/<hostname>.nix with the same structure.
+#
 { ... }:
 {
   wayland.windowManager.sway.config.output = {

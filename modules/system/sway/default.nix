@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # Habilita sway a nivel sistema + dependencias Wayland
+  # Enables sway at the system level + Wayland dependencies
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
@@ -17,6 +17,7 @@
       wl-clipboard
       xdg-utils
       thunar
+      cliphist
     ];
   };
 

@@ -10,7 +10,9 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
-  let    
+  let
+    # Builds a NixOS system for a given hostname.
+    # The host folder and its monitors file must exist under the same name.
     mkHost = hostname: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit self; };
@@ -18,8 +20,8 @@
         ./hosts/${hostname}
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs    = true;
-          home-manager.useUserPackages  = true;
+          home-manager.useGlobalPkgs   = true;
+          home-manager.useUserPackages = true;
           home-manager.users.santiagolovisotto =
             import ./modules/home { host = hostname; };
         }
@@ -27,13 +29,12 @@
     };
   in
   {
-    # hosts
-    # Agregar una máquina nueva es tan simple como:
-    #   1. mkdir hosts/<nombre>
-    #   2. copiar default.nix + hardware.nix
-    #   3. agregar la línea acá abajo
+    # To add a new machine:
+    #   1. mkdir hosts/<name>  (add default.nix + hardware.nix)
+    #   2. add modules/home/monitors/<name>.nix
+    #   3. register it below
     nixosConfigurations = {
-      desktop = mkHost "desktop";
+      desktop  = mkHost "desktop";
       # thinkpad = mkHost "thinkpad";
     };
   };
