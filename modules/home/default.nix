@@ -10,6 +10,7 @@
     ./alacritty.nix
     ./fish.nix
     ./nvim.nix
+    ./gtk.nix
   ];
 
   home.packages = with pkgs; [

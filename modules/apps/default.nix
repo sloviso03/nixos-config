@@ -4,5 +4,8 @@
     firefox
     kdePackages.okular
     spotify
+    jetbrains-toolbox
+    vscode
+    discord
   ];
 }

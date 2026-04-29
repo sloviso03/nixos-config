@@ -11,16 +11,17 @@
     enable = true;
     enableFishIntegration = true;
     settings = {
-      format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
+      format = "$directory$git_branch$git_status$cmd_duration$character";
 
       directory = {
         style = "bold white";
-        truncation_length = 3;
+        truncation_length = 0;
       };
 
       git_branch = {
-        format = "[ $branch]($style) ";
-        style = "bold cyan";
+	  format = "[ $branch ]($style)";
+	  style = "bold purple";
+	  symbol = " ";
       };
 
       git_status = {

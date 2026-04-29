@@ -21,7 +21,7 @@
         };
 
         "pulseaudio" = {
-          format = "  {volume}%";
+          format = "  vol: {volume}%";
           format-muted = "  mute";
           tooltip = false;
         };

@@ -25,7 +25,10 @@ return {
       filesystem = {
         follow_current_file = { enabled = true },
       },
-    },
+    }, 
+    init = function()
+      vim.g.neo_tree_position = "right"
+    end,
     keys = {
       { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
     },

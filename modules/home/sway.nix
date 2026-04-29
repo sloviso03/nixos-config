@@ -3,6 +3,7 @@
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
+
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
@@ -30,15 +31,6 @@
           position = "0 300";
           bg = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
         };
-        "*" = {
-          #bg = "#000000 solid_color";
-          bg = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
-        };
-      };
-
-      gaps = {
-        inner = 6;
-        outer = 4;
       };
 
       window = {
@@ -59,7 +51,6 @@
           indicator = "#000000";
           text = "#ffffff";
         };
-
         unfocused = {
           background = "#000000";
           border = "#000000";
@@ -69,17 +60,21 @@
         };
       };
 
-
       keybindings = let
         mod = "Mod4";
       in {
         "${mod}+t" = "exec alacritty";
         "${mod}+d" = "exec wofi --show drun";
         "${mod}+w" = "exec firefox";
-	"${mod}+e" = "exec thunar";
+        "${mod}+e" = "exec thunar";
         "${mod}+q" = "kill";
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'Salir?' -B 'Sí' 'swaymsg exit'";
+        "${mod}+Shift+s" = "exec grim -g \"$(slurp)\" - | tee ~/Pictures/$(date +%Y%m%d_%H%M%S).png | wl-copy";
+
+        "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
+        "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+        "XF86AudioMute" = "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
 
         "${mod}+Left" = "focus left";
         "${mod}+Down" = "focus down";
@@ -95,6 +90,7 @@
         "${mod}+2" = "workspace number 2";
         "${mod}+3" = "workspace number 3";
         "${mod}+4" = "workspace number 4";
+        "${mod}+9" = "workspace number 9";
 
         "${mod}+Shift+1" = "move container to workspace number 1";
         "${mod}+Shift+2" = "move container to workspace number 2";
