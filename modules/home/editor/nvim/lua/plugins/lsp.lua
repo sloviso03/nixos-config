@@ -1,13 +1,17 @@
 return {
+  -- disable mason, LSPs are installed via nix
+  { "williamboman/mason.nvim", enabled = false },
+  { "williamboman/mason-lspconfig.nvim", enabled = false },
+
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        gopls = {},         
-        clangd = {},   
-        ts_ls = {},    
+        gopls = {},
+        clangd = {},
+        ts_ls = {},
         kotlin_language_server = {},
-        jdtls = {},           
+        jdtls = {},
       },
     },
   },
@@ -26,7 +30,6 @@ return {
       local cmp = require("cmp")
       local luasnip = require("luasnip")
       require("luasnip.loaders.from_vscode").lazy_load()
-
       return {
         snippet = {
           expand = function(args)

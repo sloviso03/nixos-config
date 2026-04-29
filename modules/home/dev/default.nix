@@ -1,10 +1,22 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vscode
-    jetbrains-toolbox
+    # lsp servers
+    gopls
+    clang-tools       
+    nodePackages.typescript-language-server  
+    jdt-language-server                     
+    kotlin-language-server
+
+    # runtimes
+    go
     jdk21
+    nodejs
     dotnet-sdk
     gcc
+    
+    # ides
+    vscode
+    jetbrains-toolbox    
   ];
 }
