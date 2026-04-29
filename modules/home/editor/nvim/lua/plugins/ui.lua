@@ -11,25 +11,20 @@ return {
     end,
   },
 
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    opts = {
-      window = {
-        position = "right",
-        width = 30,
-      },
-      filesystem = {
-        follow_current_file = { enabled = true },
-      },
-    },
-    keys = {
-      { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
+{
+    "nvim-neo-tree/neo-tree.nvim",    
+    opts = function(_, opts)      
+      opts.window = opts.window or {}
+      opts.window.position = "right"
+      opts.window.width = 30
+      
+      opts.filesystem = opts.filesystem or {}
+      opts.filesystem.follow_current_file = { enabled = true }
+    end,
+    keys = {      
+      { "<leader>e", false }, 
+      { "<leader>E", false },
+      { "<leader>e", "<cmd>Neotree toggle right<cr>", desc = "Explorer NeoTree (Right)" },
     },
   },
 
