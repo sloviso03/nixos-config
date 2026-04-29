@@ -22,8 +22,6 @@
 
   # Enable services
   services.timesyncd.enable = true;
-  programs.fish.enable = true;
-
 
   # User (password generated with mkpasswd -m sha-512)
   users.users.santiagolovisotto = {
@@ -36,5 +34,9 @@
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   security.sudo.wheelNeedsPassword = false;
+
+  # Nix Config
+  programs.fish.enable = true;
+  nixpkgs.config.allowUnfree = true;
 }
 
