@@ -3,6 +3,6 @@
   home.packages = with pkgs; [
     spotify
     discord
-    okular
+    kdePackages.okular
   ];
 }
