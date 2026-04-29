@@ -35,3 +35,17 @@ map("n", "<Up>", "k", { desc = "Up" })
 map("n", "<Down>", "j", { desc = "Down" })
 map("n", "<Left>", "h", { desc = "Left" })
 map("n", "<Right>", "l", { desc = "Right" })
+
+-- shift+arrows to select
+map("i", "<S-Left>", "<C-o>vh", { desc = "Select left" })
+map("i", "<S-Right>", "<C-o>vl", { desc = "Select right" })
+map("i", "<S-Up>", "<C-o>vk", { desc = "Select up" })
+map("i", "<S-Down>", "<C-o>vj", { desc = "Select down" })
+map("n", "<S-Left>", "vh", { desc = "Select left" })
+map("n", "<S-Right>", "vl", { desc = "Select right" })
+map("n", "<S-Up>", "vk", { desc = "Select up" })
+map("n", "<S-Down>", "vj", { desc = "Select down" })
+
+-- ctrl+k to cut selection
+map({"n", "v"}, "<C-k>", "d", { desc = "Cut" })
+map("i", "<C-k>", "<C-o>d", { desc = "Cut line" })

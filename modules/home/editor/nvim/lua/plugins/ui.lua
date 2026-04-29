@@ -4,10 +4,12 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
+      require("dracula").setup({
+        transparent_bg = true, 
+      })
       vim.cmd("colorscheme dracula")
     end,
   },
-
 
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -25,7 +27,7 @@ return {
       filesystem = {
         follow_current_file = { enabled = true },
       },
-    }, 
+    },
     init = function()
       vim.g.neo_tree_position = "right"
     end,
@@ -34,7 +36,6 @@ return {
     },
   },
 
- 
   {
     "nvim-lualine/lualine.nvim",
     opts = {

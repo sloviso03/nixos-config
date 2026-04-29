@@ -18,6 +18,7 @@
       modifier = "Mod4";
       terminal = "alacritty";
       menu = "wofi --show drun";
+      assigns = {};
 
       fonts = {
         names = [ "JetBrainsMono Nerd Font" ];
@@ -43,6 +44,7 @@
       window = {
         border = 0;
         titlebar = false;
+        hideEdgeBorders = "both";
       };
 
       floating = {
