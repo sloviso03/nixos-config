@@ -4,7 +4,7 @@
     # lsp servers
     gopls
     clang-tools       
-    nodePackages.typescript-language-server  
+    typescript-language-server  
     jdt-language-server                     
     kotlin-language-server
 
