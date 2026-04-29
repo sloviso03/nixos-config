@@ -4,12 +4,6 @@
     enable = true;
     checkConfig = false;
 
-    extraConfig = ''
-      gaps inner 0
-      gaps outer 0
-      smart_gaps off
-    '';
-
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
@@ -34,6 +28,8 @@
       gaps = {
         inner = 0;
         outer = 0;
+        smartBorders = "off";
+        smartGaps = false;
       };
 
       window = {
@@ -95,8 +91,8 @@
         "${mod}+Shift+Right" = "move right";
 
         # resize
-        "${mod}+Ctrl+Left" = "resize shrink width 50px";
-        "${mod}+Ctrl+Right" = "resize grow width 50px";
+        "${mod}+Ctrl+Left" = "resize grow width 50px";
+        "${mod}+Ctrl+Right" = "resize shrink width 50px";
         "${mod}+Ctrl+Up" = "resize shrink height 50px";
         "${mod}+Ctrl+Down" = "resize grow height 50px";
 
