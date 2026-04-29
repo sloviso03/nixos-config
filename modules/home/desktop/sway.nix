@@ -112,8 +112,8 @@
         "${mod}+Shift+3" = "move container to workspace number 3";
         "${mod}+Shift+4" = "move container to workspace number 4";
 
-        "${mod}+button4" = "workspace prev";
-        "${mod}+button5" = "workspace next";
+        "${mod}+Tab" = "workspace prev";
+        "${mod}+Shift+Tab" = "workspace next";
       };
 
       bars = [{

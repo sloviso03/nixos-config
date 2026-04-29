@@ -5,6 +5,8 @@
     ./editor      # neovim + lazyvim
     ./terminal    # alacritty
     ./desktop     # sway + waybar + gtk
+    ./dev
+    ./apps
     (./monitors + "/${host}.nix")  # per-machine monitor outputs
   ];
 
