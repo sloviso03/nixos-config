@@ -20,6 +20,8 @@ return {
       
       opts.filesystem = opts.filesystem or {}
       opts.filesystem.follow_current_file = { enabled = true }
+      
+      return opts
     end,
     keys = {      
       { "<leader>e", false }, 
