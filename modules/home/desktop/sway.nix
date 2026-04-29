@@ -4,6 +4,12 @@
     enable = true;
     checkConfig = false;
 
+    extraConfig = ''
+      gaps inner 0
+      gaps outer 0
+      smart_gaps off
+    '';
+
     config = {
       modifier = "Mod4";
       terminal = "alacritty";

@@ -7,6 +7,11 @@
     '';
   };
 
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true; 
+  }
+
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
