@@ -1,13 +1,13 @@
 { pkgs, ... }:
 {
   programs.neovim = {
-    enable = true;
+    enable        = true;
     defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
+    viAlias       = true;
+    vimAlias      = true;
   };
 
-  # LazyVim xdg config
+  # LazyVim - lua files are in modules/home/editor/nvim/
   xdg.configFile."nvim" = {
     source = ./nvim;
     recursive = true;

@@ -19,9 +19,9 @@
       };
 
       git_branch = {
-	  format = "[ $branch ]($style)";
-	  style = "bold purple";
-	  symbol = " ";
+        format = "[ $branch ]($style)";
+        style  = "bold purple";
+        symbol = " ";
       };
 
       git_status = {

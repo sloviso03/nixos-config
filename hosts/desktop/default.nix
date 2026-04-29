@@ -1,0 +1,49 @@
+{ pkgs, ... }:
+{
+  imports = [
+    ./hardware.nix
+    ../../modules/system/sway
+    ../../modules/system/pipewire
+  ];
+
+  # bootloader 
+  boot.loader = {
+    systemd-boot.enable      = true;
+    efi.canTouchEfiVariables = true;
+  };
+
+  # network
+  networking = {
+    hostName = "desktop";
+    networkmanager.enable = true;
+  };
+
+  # locale / timezone
+  time.timeZone      = "America/Argentina/Buenos_Aires";
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  # user 
+  users.users.santiagolovisotto = {
+    isNormalUser = true;
+    shell = pkgs.fish;
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" ];
+  };
+
+  # Basic system packages
+  environment.systemPackages = with pkgs; [
+    git
+    wget
+    curl
+    unzip
+    ripgrep
+    fd
+  ];
+
+  # shell 
+  programs.fish.enable = true;
+
+  # nix settings
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  system.stateVersion = "24.11";
+}

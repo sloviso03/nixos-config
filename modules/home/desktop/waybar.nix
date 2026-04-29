@@ -1,7 +1,7 @@
 { ... }:
 {
   programs.waybar = {
-    enable = true;
+    enable   = true;
     settings = {
       mainBar = {
         position = "bottom";
@@ -26,11 +26,11 @@
           tooltip = false;
         };
 
-	"clock" = {
-	  format = "{:%H:%M  %d/%m/%Y}";
-	  timezone = "America/Argentina/Buenos_Aires";
-	  tooltip = false;
-	};
+        "clock" = {
+          format = "{:%H:%M  %d/%m/%Y}";
+          timezone = "America/Argentina/Buenos_Aires";
+          tooltip = false;
+        };
       };
     };
 

@@ -4,12 +4,12 @@
     enable = true;
 
     theme = {
-      name = "Dracula";
+      name    = "Dracula";
       package = pkgs.dracula-theme;
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
+      name    = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
 
@@ -18,13 +18,8 @@
       size = 11;
     };
 
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
-
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
   };
 
   home.sessionVariables = {

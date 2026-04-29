@@ -1,24 +1,16 @@
-{ pkgs, ... }:
+{ host ? "desktop", ... }:
 {
-  home.username = "santiagolovisotto";
-  home.homeDirectory = "/home/santiagolovisotto";
-  home.stateVersion = "25.11";
-
   imports = [
-    ./sway.nix
-    ./waybar.nix
-    ./alacritty.nix
-    ./fish.nix
-    ./nvim.nix
-    ./gtk.nix
+    ./shell       # fish + starship
+    ./editor      # neovim + lazyvim
+    ./terminal    # alacritty
+    ./desktop     # sway + waybar + gtk
+    (./monitors + "/${host}.nix")  # outputs específicos de esta máquina
   ];
 
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    thunar
-    yazi
-    fastfetch
-  ];
-
-  programs.home-manager.enable = true;
+  home = {
+    username = "santiagolovisotto";
+    homeDirectory = "/home/santiagolovisotto";
+    stateVersion = "24.11";
+  };
 }

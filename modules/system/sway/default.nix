@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  # Habilita sway a nivel sistema + dependencias Wayland
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
@@ -15,6 +16,7 @@
       slurp
       wl-clipboard
       xdg-utils
+      thunar
     ];
   };
 
@@ -23,14 +25,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];    
-  };
-
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   environment.sessionVariables = {
@@ -38,5 +33,4 @@
     MOZ_ENABLE_WAYLAND = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
-
 }
