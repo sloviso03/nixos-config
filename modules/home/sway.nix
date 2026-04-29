@@ -2,10 +2,16 @@
 {
   wayland.windowManager.sway = {
     enable = true;
+    checkConfig = false;
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
       menu = "wofi --show drun";
+
+      fonts = {
+        names = [ "JetBrainsMono Nerd Font" ];
+        size = 11.0;
+      };
 
       input = {
         "*" = {
@@ -13,12 +19,64 @@
         };
       };
 
+      output = {
+        "HDMI-A-1" = {
+          mode = "1920x1080@100Hz";
+          position = "1366 0";
+          bg = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
+        };
+        "DP-3" = {
+          mode = "1366x768@60Hz";
+          position = "0 300";
+          bg = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
+        };
+        "*" = {
+          #bg = "#000000 solid_color";
+          bg = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
+        };
+      };
+
+      gaps = {
+        inner = 6;
+        outer = 4;
+      };
+
+      window = {
+        border = 0;
+        titlebar = false;
+      };
+
+      floating = {
+        border = 0;
+        titlebar = false;
+      };
+
+      colors = {
+        focused = {
+          background = "#000000";
+          border = "#000000";
+          childBorder = "#000000";
+          indicator = "#000000";
+          text = "#ffffff";
+        };
+
+        unfocused = {
+          background = "#000000";
+          border = "#000000";
+          childBorder = "#000000";
+          indicator = "#000000";
+          text = "#888888";
+        };
+      };
+
+
       keybindings = let
         mod = "Mod4";
       in {
-        "${mod}+Return" = "exec alacritty";
+        "${mod}+t" = "exec alacritty";
         "${mod}+d" = "exec wofi --show drun";
         "${mod}+w" = "exec firefox";
+	"${mod}+e" = "exec thunar";
         "${mod}+q" = "kill";
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'Salir?' -B 'Sí' 'swaymsg exit'";
@@ -46,6 +104,7 @@
 
       bars = [{
         command = "waybar";
+        position = "bottom";
       }];
     };
   };

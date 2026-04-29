@@ -6,6 +6,17 @@
 
   imports = [
     ./sway.nix
+    ./waybar.nix
+    ./alacritty.nix
+    ./fish.nix
+    ./nvim.nix
+  ];
+
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    thunar
+    yazi
+    fastfetch
   ];
 
   programs.home-manager.enable = true;

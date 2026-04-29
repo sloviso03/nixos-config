@@ -5,6 +5,7 @@
     ../../modules/core
     ../../modules/sway
     ../../modules/apps
+    ../../modules/dev
   ];
 
   networking.hostName = "nixos";
