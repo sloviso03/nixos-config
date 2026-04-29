@@ -21,6 +21,8 @@
       directory = {
         style = "bold white";
         truncation_length = 0;
+        truncate_to_repo = false;
+        home_symbol = "~";
       };
 
       git_branch = {
@@ -32,6 +34,12 @@
       git_status = {
         format = "[$all_status$ahead_behind]($style) ";
         style = "bold red";
+        ahead = "↑$count";
+        behind = "↓$count";
+        diverged = "↑$ahead_count↓$behind_count";
+        modified = "!";
+        untracked = "?";
+        staged = "+";
       };
 
       character = {
