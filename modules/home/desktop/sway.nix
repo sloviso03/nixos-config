@@ -4,6 +4,16 @@
     enable = true;
     checkConfig = false;
 
+    extraConfig = ''
+      smart_gaps off
+      smart_borders off
+      hide_edge_borders both
+
+      # Win+Scroll to cycle workspaces
+      bindsym --whole-window Mod4+button4 workspace prev
+      bindsym --whole-window Mod4+button5 workspace next
+    '';
+
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
@@ -28,8 +38,6 @@
       gaps = {
         inner = 0;
         outer = 0;
-        smartBorders = "off";
-        smartGaps = false;
       };
 
       window = {
