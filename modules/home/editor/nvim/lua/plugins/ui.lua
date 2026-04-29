@@ -11,7 +11,7 @@ return {
     end,
   },
 
-{
+  {
     "nvim-neo-tree/neo-tree.nvim",    
     opts = function(_, opts)      
       opts.window = opts.window or {}
