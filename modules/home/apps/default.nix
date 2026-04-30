@@ -5,6 +5,6 @@
     spotify
     discord
     kdePackages.okular
-    ncspot
+    spotify-player
   ];
 }
