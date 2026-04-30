@@ -61,13 +61,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+
+-- compile and run current file based on filetype
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "cpp", "c" },
   callback = function()
     map("n", "<F5>", function()
       local file = vim.fn.expand("%")
-      local out = vim.fn.expand("%:r")
+      local out  = vim.fn.expand("%:r")
       vim.cmd("w")
-      vim.cmd("split | terminal g++ ") .. file .. " -o " .. out .. " && ./" .. out)
-  end, { desc = "Compile and run", buffer = true })
+      vim.cmd("split | terminal g++ " .. file .. " -o " .. out .. " && ./" .. out)
+    end, { desc = "Compile and run", buffer = true })
+  end,
 })
