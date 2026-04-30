@@ -25,19 +25,19 @@
               break
       ")
 
-      LEN=${#WORKSPACES[@]}
+      LEN=''${#WORKSPACES[@]}
       IDX=0
-      for i in "${!WORKSPACES[@]}"; do
-        if [ "${WORKSPACES[$i]}" = "$CURRENT" ]; then
+      for i in "''${!WORKSPACES[@]}"; do
+        if [ "''${WORKSPACES[$i]}" = "$CURRENT" ]; then
           IDX=$i
           break
         fi
       done
 
       if [ "$DIRECTION" = "next" ]; then
-        NEXT=${WORKSPACES[$(( (IDX + 1) % LEN ))]}
+        NEXT=''${WORKSPACES[$(( (IDX + 1) % LEN ))]}
       else
-        NEXT=${WORKSPACES[$(( (IDX - 1 + LEN) % LEN ))]}
+        NEXT=''${WORKSPACES[$(( (IDX - 1 + LEN) % LEN ))]}
       fi
 
       swaymsg "workspace number $NEXT"

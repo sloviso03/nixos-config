@@ -8,8 +8,6 @@
       smart_gaps off
       smart_borders off
       hide_edge_borders both
-
-      # Win+Scroll to cycle workspaces
       bindsym --whole-window Mod4+button4 exec ~/.config/sway/cycle-hdmi.sh prev
       bindsym --whole-window Mod4+button5 exec ~/.config/sway/cycle-hdmi.sh next
     '';
