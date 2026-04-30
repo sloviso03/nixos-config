@@ -74,7 +74,7 @@
         "${mod}+q" = "kill";
         "${mod}+f" = "fullscreen toggle";
         "${mod}+v" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
-
+        "${mod}+o" = "exec okular";
 
         # sway
         "${mod}+Shift+r" = "reload";

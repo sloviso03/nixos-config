@@ -60,3 +60,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.keymap.set("n", "<leader>E", "<cmd>Neotree toggle right<cr>", { desc = "Explorer (Right)" })
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "cpp", "c" },
+  callback = function()
+    map("n", "<F5>", function()
+      local file = vim.fn.expand("%")
+      local out = vim.fn.expand("%:r")
+      vim.cmd("w")
+      vim.cmd("split | terminal g++ ") .. file .. " -o " .. out .. " && ./" .. out)
+  end, { desc = "Compile and run", buffer = true })
+})
