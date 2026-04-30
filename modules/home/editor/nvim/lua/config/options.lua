@@ -67,10 +67,10 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "cpp", "c" },
   callback = function()
     map("n", "<F5>", function()
-      local file = vim.fn.expand("%")
-      local out  = vim.fn.expand("%:r")
+      local file = vim.fn.expand("%:p")
+      local out  = vim.fn.expand("%:p:r")
       vim.cmd("w")
-      vim.cmd("split | terminal g++ " .. file .. " -o " .. out .. " && ./" .. out)
+      vim.cmd("split | terminal g++ " .. file .. " -o " .. out .. " && " .. out)
     end, { desc = "Compile and run", buffer = true })
   end,
 })
