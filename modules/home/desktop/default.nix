@@ -12,7 +12,7 @@
     executable = true;
     text = ''
       #!/usr/bin/env bash
-      WORKSPACES=(1 3 4)
+      WORKSPACES=(1 2)
       OUTPUT="HDMI-A-1"
       DIRECTION=$1
 
@@ -43,4 +43,6 @@
       swaymsg "workspace number $NEXT"
     '';
   };
+
+  
 }
