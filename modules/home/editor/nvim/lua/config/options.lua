@@ -35,6 +35,14 @@ map("n", "<Down>", "j", { desc = "Down" })
 map("n", "<Left>", "h", { desc = "Left" })
 map("n", "<Right>", "l", { desc = "Right" })
 
+
+-- shift + arrows to select text in insert mode
+map("i", "<S-Left>",  "<C-o>vh", { desc = "Select left" })
+map("i", "<S-Right>", "<C-o>vl", { desc = "Select right" })
+map("i", "<S-Up>",    "<C-o>vk", { desc = "Select up" })
+map("i", "<S-Down>",  "<C-o>vj", { desc = "Select down" })
+
+
 -- force neo-tree to always open on the right
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
