@@ -5,5 +5,6 @@
     spotify
     discord
     kdePackages.okular
+    ncspot
   ];
 }
