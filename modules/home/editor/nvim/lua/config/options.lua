@@ -49,3 +49,14 @@ map("n", "<S-Down>", "vj", { desc = "Select down" })
 -- ctrl+k to cut selection
 map({"n", "v"}, "<C-k>", "d", { desc = "Cut" })
 map("i", "<C-k>", "<C-o>d", { desc = "Cut line" })
+
+
+
+-- force neo-tree to always open on the right
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    require("neo-tree.command").execute({ action = "close" })
+    vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle right<cr>", { desc = "Explorer (Right)" })
+    vim.keymap.set("n", "<leader>E", "<cmd>Neotree toggle right<cr>", { desc = "Explorer (Right)" })
+  end,
+})
