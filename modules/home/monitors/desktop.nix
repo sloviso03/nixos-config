@@ -22,12 +22,7 @@
         position = "0 300";
         bg       = "/home/santiagolovisotto/Pictures/Wallpapers/bg.png fill";
       };
-    };
-
-    workspaceOutputAssign = [
-      { workspace = "1"; output = "HDMI-A-1"; }
-      { workspace = "2"; output = "HDMI-A-1"; }
-      { workspace = "3"; output = "DP-3"; }
-    ];
+    };    
   };
 }
+
