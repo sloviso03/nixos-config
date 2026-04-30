@@ -10,8 +10,8 @@
       hide_edge_borders both
 
       # Win+Scroll to cycle workspaces
-      bindsym --whole-window Mod4+button4 workspace prev
-      bindsym --whole-window Mod4+button5 workspace next
+      bindsym --whole-window Mod4+button4 exec ~/.config/sway/cycle-hdmi.sh prev
+      bindsym --whole-window Mod4+button5 exec ~/.config/sway/cycle-hdmi.sh next
     '';
 
     config = {
@@ -117,9 +117,6 @@
         "${mod}+Shift+2" = "move container to workspace number 2";
         "${mod}+Shift+3" = "move container to workspace number 3";
         "${mod}+Shift+4" = "move container to workspace number 4";
-
-        "${mod}+Tab" = "workspace prev";
-        "${mod}+Shift+Tab" = "workspace next";
       };
 
       bars = [{
