@@ -99,8 +99,8 @@
         # resize
         "${mod}+Ctrl+Left" = "resize grow width 50px";
         "${mod}+Ctrl+Right" = "resize shrink width 50px";
-        "${mod}+Ctrl+Up" = "resize shrink height 50px";
-        "${mod}+Ctrl+Down" = "resize grow height 50px";
+        "${mod}+Ctrl+Up" = "resize grow height 50px";
+        "${mod}+Ctrl+Down" = "resize shrink height 50px";
 
         # workspaces
         "${mod}+1" = "workspace number 1";
