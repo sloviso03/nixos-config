@@ -36,11 +36,15 @@ map("n", "<Left>", "h", { desc = "Left" })
 map("n", "<Right>", "l", { desc = "Right" })
 
 
--- shift + arrows to select text in insert mode
-map("i", "<S-Left>",  "<C-o>vh", { desc = "Select left" })
-map("i", "<S-Right>", "<C-o>vl", { desc = "Select right" })
-map("i", "<S-Up>",    "<C-o>vk", { desc = "Select up" })
-map("i", "<S-Down>",  "<C-o>vj", { desc = "Select down" })
+-- nano/GUI-style shift+arrow selection
+opt.keymodel = "startsel,stopsel"   -- shift+arrows start/stop selection
+opt.selectmode = "key"              -- selection mode (not visual) when using keyboard
+opt.selection = "inclusive"
+-- shift + arrows in insert and normal mode
+map({"i", "n"}, "<S-Left>",  "<S-Left>",  { desc = "Select left",  noremap = true })
+map({"i", "n"}, "<S-Right>", "<S-Right>", { desc = "Select right", noremap = true })
+map({"i", "n"}, "<S-Up>",    "<S-Up>",    { desc = "Select up",    noremap = true })
+map({"i", "n"}, "<S-Down>",  "<S-Down>",  { desc = "Select down",  desc = "Select down", noremap = true })
 
 
 -- force neo-tree to always open on the right
