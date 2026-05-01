@@ -7,6 +7,7 @@
     typescript-language-server  
     jdt-language-server                     
     kotlin-language-server
+    android-tools
 
     # runtimes
     go
@@ -16,8 +17,7 @@
     gcc
     
     # ides
-    vscode    
-    android-tools
+    vscode        
     android-studio    
   ];
 

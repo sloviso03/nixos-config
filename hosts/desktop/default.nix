@@ -27,9 +27,6 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  # android development
-  programs.adb.enable = true;
-
   # user 
   users.users.santiagolovisotto = {
     isNormalUser = true;
