@@ -27,11 +27,14 @@
     nerd-fonts.jetbrains-mono
   ];
 
+  # android development
+  programs.adb.enable = true;
+
   # user 
   users.users.santiagolovisotto = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" ];
   };
 
   # Basic system packages
@@ -51,5 +54,6 @@
   # nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
+  virtualisation.libvirtd.enable = true;
   system.stateVersion = "24.11";
 }

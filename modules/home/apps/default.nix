@@ -4,7 +4,6 @@
     firefox
     spotify
     discord
-    kdePackages.okular
-    spotify-player
+    kdePackages.okular    
   ];
 }
