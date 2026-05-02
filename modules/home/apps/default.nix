@@ -4,6 +4,7 @@
     firefox
     spotify
     discord
-    kdePackages.okular    
+    kdePackages.okular  
+    anki  
   ];
 }
