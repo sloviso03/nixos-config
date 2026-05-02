@@ -21,7 +21,7 @@
     # ides/tools
     vscode        
     android-studio    
-    dbeaver
+    dbeaver-bin
   ];
 
 
