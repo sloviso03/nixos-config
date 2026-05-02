@@ -8,7 +8,7 @@
 
   # bootloader 
   boot.loader = {
-    systemd-boot.enable      = true;
+    systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
 
@@ -19,7 +19,7 @@
   };
 
   # locale / timezone
-  time.timeZone      = "America/Argentina/Buenos_Aires";
+  time.timeZone = "America/Argentina/Buenos_Aires";
   i18n.defaultLocale = "en_US.UTF-8";
 
   # fonts
@@ -31,7 +31,7 @@
   users.users.santiagolovisotto = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "docker" ];
   };
 
   # Basic system packages

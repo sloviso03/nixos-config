@@ -8,6 +8,8 @@
     jdt-language-server                     
     kotlin-language-server
     android-tools
+    docker
+    docker-compose
 
     # runtimes
     go
@@ -16,9 +18,10 @@
     dotnet-sdk
     gcc
     
-    # ides
+    # ides/tools
     vscode        
     android-studio    
+    dbeaver
   ];
 
 
