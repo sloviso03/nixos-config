@@ -43,6 +43,7 @@
     ripgrep
     fd
     nano
+    fastfetch
   ];
 
   # shell 
