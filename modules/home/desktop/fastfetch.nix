@@ -4,23 +4,23 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        source = "GNU";
         type = "builtin";
         padding = {
           left = 1;
           right = 4;
         };
         color = {
-          "1" = "white";
-          "2" = "bright_black";
+          "1" = "yellow";
+          "2" = "white";
         };
       };
       display = {
         separator = " → ";
         color = {
-          keys = "bright_black";
+          keys = "yellow";
           title = "white";
-          separator = "bright_black";
+          separator = "bright_yellow";
         };
       };
       modules = [
@@ -29,11 +29,17 @@
         "os"
         "kernel"
         "uptime"
+        "packages"
         "shell"
         "terminal"
+        "wm"
         "cpu"
         "gpu"
         "memory"
+        "disk"
+        "datetime"
+        "separator"
+        "colors"
       ];
     };
   };
