@@ -6,7 +6,8 @@
     spotify
     discord
     kdePackages.okular  
-    anki          
+    anki       
+    vlc   
   ];
 
   
