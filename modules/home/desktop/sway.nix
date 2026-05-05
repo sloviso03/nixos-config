@@ -8,7 +8,7 @@
       smart_gaps off
       smart_borders off
       hide_edge_borders both
-    '';
+    '';  
 
     config = {
       modifier = "Mod4";
@@ -47,7 +47,7 @@
         border = 0;
         titlebar = false;
       };
-
+      
       colors = {
         focused = {
           background = "#000000"; border = "#000000";

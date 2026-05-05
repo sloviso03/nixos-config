@@ -34,6 +34,16 @@
     extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "docker" ];
   };
 
+  hardware.graphics = {      
+      enable = true;
+      enable32Bit = true;
+  };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
+
   # Basic system packages
   environment.systemPackages = with pkgs; [
     git
