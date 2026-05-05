@@ -8,6 +8,7 @@
     kdePackages.okular  
     anki       
     vlc   
+    steam
   ];
 
   
