@@ -7,8 +7,8 @@
     discord
     kdePackages.okular  
     anki       
-    vlc   
-    steam
+    vlc       
+    chromium
   ];
 
   

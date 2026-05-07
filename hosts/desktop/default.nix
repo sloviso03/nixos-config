@@ -46,6 +46,34 @@
     fastfetch
   ];
 
+  # Graphics / GPU
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;  
+  };
+
+  # Steam
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;  
+  };
+
+  # AI BLOCKER: no permite acceder a páginas de IA 
+  networking.hosts = {
+    "0.0.0.0" = [
+      "chatgpt.com"
+      "chat.openai.com"
+      "openai.com"
+      "claude.ai"
+      "anthropic.com"
+      "gemini.google.com"
+      "bard.google.com"
+      "poe.com"
+      "perplexity.ai"
+      "mistral.ai"
+    ];
+  };
+
   # shell 
   programs.fish.enable = true;
 
