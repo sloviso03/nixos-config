@@ -9,6 +9,11 @@
 
   services.cliphist.enable = true;
 
+  home.file.".config/xfce4/helpers.rc".text = ''
+    TerminalEmulator=alacritty
+    TerminalEmulatorDismissed=true
+  '';
+
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {

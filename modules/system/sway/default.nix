@@ -18,6 +18,7 @@
       xdg-utils
       thunar
       cliphist
+      jq
     ];
   };
 
@@ -31,6 +32,8 @@
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
+    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    XCURSOR_SIZE = "24";
     TERMINAL = "alacritty";
   };
 }

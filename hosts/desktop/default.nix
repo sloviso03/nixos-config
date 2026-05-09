@@ -64,7 +64,7 @@
       "chatgpt.com"
       "chat.openai.com"
       "openai.com"
-      "claude.ai"
+      #"claude.ai"
       "anthropic.com"
       "gemini.google.com"
       "bard.google.com"
@@ -82,4 +82,6 @@
   nixpkgs.config.allowUnfree = true;
   virtualisation.libvirtd.enable = true;
   system.stateVersion = "24.11";
+  
+  boot.kernelParams = [ "quiet" "loglevel=0" ];
 }
