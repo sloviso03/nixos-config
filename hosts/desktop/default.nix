@@ -64,7 +64,7 @@
       "chatgpt.com"
       "chat.openai.com"
       "openai.com"
-      #"claude.ai"
+      "claude.ai"
       "anthropic.com"
       "gemini.google.com"
       "bard.google.com"
