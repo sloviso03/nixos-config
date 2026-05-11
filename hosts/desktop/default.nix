@@ -61,12 +61,12 @@
   # AI BLOCKER: no permite acceder a páginas de IA 
   networking.hosts = {
     "0.0.0.0" = [
-      "chatgpt.com"
-      "chat.openai.com"
-      "openai.com"
-      "claude.ai"
+      #"chatgpt.com"
+      #"chat.openai.com"
+     # "openai.com"
+     # "claude.ai"
       "anthropic.com"
-      "gemini.google.com"
+      #"gemini.google.com"
       "bard.google.com"
       "poe.com"
       "perplexity.ai"

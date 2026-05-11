@@ -36,4 +36,9 @@
     XCURSOR_SIZE = "24";
     TERMINAL = "alacritty";
   };
+
+
+
+
+  
 }

@@ -5,6 +5,7 @@
     ./waybar.nix
     ./gtk.nix
     ./fastfetch.nix
+    ./wofi.nix
   ];
 
   services.cliphist.enable = true;
