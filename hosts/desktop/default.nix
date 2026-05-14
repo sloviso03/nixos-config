@@ -30,7 +30,7 @@
   # user 
   users.users.santiagolovisotto = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "docker" ];
   };
 
@@ -75,7 +75,7 @@
   };
 
   # shell 
-  programs.fish.enable = true;
+  programs.fish.enable = false;
 
   # nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

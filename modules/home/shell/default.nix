@@ -1,20 +1,20 @@
 { ... }:
 {
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set fish_greeting ""
+  programs.bash = {
+    enable = true;  
+    bashrcExtra = ''
+      
     '';
   };
 
   programs.fzf = {
     enable = true;
-    enableFishIntegration = true; 
+    enableBashIntegration = true; 
   };
 
   programs.starship = {
     enable = true;
-    enableFishIntegration = true;
+    enableBashIntegration = true;
     settings = {
       format = "$directory$git_branch$git_status$cmd_duration$character";
 

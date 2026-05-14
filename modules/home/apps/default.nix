@@ -9,6 +9,8 @@
     anki       
     vlc       
     chromium
+    zoom-us
+    obsidian
   ];
 
   
