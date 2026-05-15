@@ -26,8 +26,10 @@
     workspaceOutputAssign = [
       { workspace = "1"; output = "HDMI-A-1"; }
       { workspace = "2"; output = "HDMI-A-1"; }
-      { workspace = "3"; output = "DP-3"; }
+      { workspace = "3"; output = "HDMI-A-1"; }
       { workspace = "4"; output = "DP-3"; }
+      { workspace = "5"; output = "DP-3"; }
+      { workspace = "6"; output = "DP-3"; }
     ];
   };
 }
