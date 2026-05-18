@@ -76,6 +76,7 @@
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'Salir?' -B 'Sí' 'swaymsg exit'";
         "${mod}+Shift+s" = ''exec grim -g "$(slurp)" - | tee ~/Pictures/$(date +%Y%m%d_%H%M%S).png | wl-copy'';
+        "${mod}+Shift+a" = "exec grim - | wl-copy && grim ~/Pictures/$(date +%Y%m%d_%H%M%S).png";
       
         "XF86AudioRaiseVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
         "XF86AudioLowerVolume" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
@@ -89,19 +90,29 @@
         "${mod}+Shift+Down" = "move down";
         "${mod}+Shift+Up" = "move up";
         "${mod}+Shift+Right" = "move right";
-        "${mod}+Ctrl+Left" = "resize grow width 50px";
-        "${mod}+Ctrl+Right" = "resize shrink width 50px";
-        "${mod}+Ctrl+Up" = "resize grow height 50px";
-        "${mod}+Ctrl+Down" = "resize shrink height 50px";
         "${mod}+1" = "workspace number 1";
         "${mod}+2" = "workspace number 2";
         "${mod}+3" = "workspace number 3";
         "${mod}+4" = "workspace number 4";
+        "${mod}+5" = "workspace number 5";
+        "${mod}+6" = "workspace number 6";
         "${mod}+Shift+1" = "move container to workspace number 1";
         "${mod}+Shift+2" = "move container to workspace number 2";
         "${mod}+Shift+3" = "move container to workspace number 3";
         "${mod}+Shift+4" = "move container to workspace number 4";
+        "${mod}+Shift+5" = "move container to workspace number 5";
+        "${mod}+Shift+6" = "move container to workspace number 6";
+        
+        "${mod}+Ctrl+Left" = "resize shrink width 50px"; 
+        "${mod}+Ctrl+Right" = "resize grow width 50px";  
+        "${mod}+Ctrl+Up" = "resize shrink height 50px";  
+        "${mod}+Ctrl+Down" = "resize grow height 50px";   
       };
+
+      startup = [
+        { command = "nm-applet --indicator"; }
+        { command = "blueman-applet"; }
+      ];
       
       bars = [{
         command = "waybar";

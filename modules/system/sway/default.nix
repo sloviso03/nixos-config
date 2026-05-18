@@ -15,8 +15,7 @@
       grim
       slurp
       wl-clipboard
-      xdg-utils
-      thunar
+      xdg-utils      
       cliphist
       jq
     ];
