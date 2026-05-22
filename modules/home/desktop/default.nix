@@ -19,6 +19,8 @@
     enable = true;
     defaultApplications = {
       "x-scheme-handler/terminal" = "alacritty.desktop";
+      "inode/directory" = "thunar.desktop";
     };
   };
+
 }
