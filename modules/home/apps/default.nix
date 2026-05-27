@@ -1,16 +1,18 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    firefox
+    firefox    
     zip
     spotify
     discord
     kdePackages.okular  
     anki       
     vlc       
-    chromium
     zoom-us
+    p7zip
     obsidian
+    pavucontrol
+    gpu-screen-recorder-gtk
   ];
 
   
